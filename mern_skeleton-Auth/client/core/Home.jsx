@@ -52,7 +52,8 @@ const classes = useStyles()
 return (
 <>
   <Link to="/">Home</Link> | <Link to="/users">USERS</Link> | <Link to="/signup">SIGNUP</Link> | <Link to="/signin">SIGNIN</Link> | 
-       <Link to="/" >Sign-out</Link>
+       <Link to="/" >Sign-out</Link> | <Link to="/about" >About</Link> | <Link to="/products" >Products</Link> | <Link to="/contact" >Contact</Link> 
+       | <Link to="/admin" >Admin</Link>
 
 <Card className={classes.card}>
    
