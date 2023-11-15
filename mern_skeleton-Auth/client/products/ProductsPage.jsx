@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import Card from './Card';
 import ProductContainer from './ProductContainer';
+import Title from './Title';
 //import { list } from './api-products.js';
 
 const ProductsPage = () =>  {
@@ -38,12 +39,30 @@ const ProductsPage = () =>  {
         };
 */
 
+
+const [values, setValues] = useState(
+    []
+   );
+ 
+
+
+   useEffect(() =>{
+     fetch('http://localhost:3000/api/products/')
+     .then(response => response.json())
+     .then(data => setValues(data)) 
+
+         },[]);
+
  
 
 return <div>
-    <h1>ProductsPage</h1>
+    <Title/>
+    
     <ProductContainer>
-        <Card/>
+
+    {values.map((product) => (
+        <Card productInfo={product} key={values.id}/>
+    ))}
     </ProductContainer>
    
      

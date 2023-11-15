@@ -4,45 +4,29 @@ import './Card.css';
 
 const Card = (props) => {
 
-    const [values, setValues] = useState(
-    []
-   );
- 
-
-
-   useEffect(() =>{
-     fetch('http://localhost:3000/api/products/')
-     .then(response => response.json())
-     .then(data => setValues(data)) 
-
-         },[]);
 
 
 
 
-    return <div>
-
-                {values.map((product) => (
-            <div className='card' key={product.id}>
-                <img src={"../images/" + product.imageURL} alt={product.name}/>
+    return <div className='card' key={props.productInfo.id}>
+                <img src={"../images/" + props.productInfo.imageURL} alt={props.productInfo.name}/>
                 <h3>Name</h3>
-                <p>{product.name}</p>
+                <p>{props.productInfo.name}</p>
                 <h4>Description</h4>
-                <p>{product.description}</p>
+                <p>{props.productInfo.description}</p>
                 <h4>Price:</h4>
-                <p>{product.price}</p>
+                <p>{props.productInfo.price}</p>
                 <h4>Category</h4>
-                <p>{product.category}</p>
+                <p>{props.productInfo.category}</p>
                 <h4>Collection</h4>
-                <p>{product.coll}</p>
+                <p>{props.productInfo.coll}</p>
                 <h4>Quantity</h4>
-                <p>{product.quantity}</p>
+                <p>{props.productInfo.quantity}</p>
+</div>
 
-                </div>
+       
 
-        ))}
 
-    </div>
 
 
 }
