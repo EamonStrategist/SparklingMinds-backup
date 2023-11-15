@@ -1,4 +1,4 @@
-import React, {useEffect, Component, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 //import { list } from './api-products.js';
 
 const ProductsPage = () =>  {
@@ -23,18 +23,20 @@ const ProductsPage = () =>  {
     const [values, setValues] = useState(
        []
       );
+    
 
-      /*useEffect(() =>{
+
+      useEffect(() =>{
         fetch('http://localhost:3000/api/products/')
         .then(response => response.json())
         .then(data => setValues(data)) 
-            },[values]);*/
+            },[]);
 
             /*onComponentMount(){
                 fetch('http://localhost:3000/api/products/')
                 .then(response => response.json())
                 .then(data => setValues(data)) 
-             };*/
+             };
         
 
         const getProduct = () =>{
@@ -42,7 +44,7 @@ const ProductsPage = () =>  {
             .then(response => response.json())
             .then(data => setValues(data))
         };
-
+*/
 
 
 return <div>
@@ -68,7 +70,7 @@ return <div>
 
             ))}
         </div>
-        <button type="submit" onClick={getProduct} value="View Products"/>
+     
     </div>
 
 
