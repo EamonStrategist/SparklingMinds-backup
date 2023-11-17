@@ -5,6 +5,7 @@ import { expressjwt } from "express-jwt";
 import config from './../../config/config.js'
 
 
+
 const signin = async (req, res) => { 
 try {
 let user = await User.findOne({ "email": req.body.email }) 
@@ -14,13 +15,15 @@ if (!user.authenticate(req.body.password)) {
 return res.status('401').send({ error: "Email and password don't match." })
 }
 const token = jwt.sign({ _id: user._id }, config.jwtSecret) 
+user.token = token;
 res.cookie('t', token, { expire: new Date() + 9999 }) 
 return res.json({
 token, 
 user: {
 _id: user._id, 
 name: user.name,
-email: user.email 
+email: user.email, 
+token: user.token
 }
 })
 } catch (err) {
@@ -49,4 +52,23 @@ error: "User is not authorized"
 } 
 next()
 }
-export default { signin, signout, requireSignin, hasAuthorization }
+
+const readjwt = async (req, res, next) =>{
+    try{
+    let user = await User.findOne({"token": req.body.jwt});
+    if (!user){return res.status(400).json({
+        error: "User not found"
+    })}
+
+    return res.json({token: user.token});
+
+    }catch (err){
+        return res.status(400).json({
+            error: "Cound not retrieve product"
+        })
+
+    }
+    next()
+}
+
+export default { signin, signout, requireSignin, hasAuthorization, readjwt }

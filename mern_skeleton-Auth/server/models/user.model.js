@@ -26,8 +26,10 @@ hashed_password: {
 type: String,
 required: 'Password is required'
 },
- salt: String
-});
+ salt: String,
+ token: String  //Added nov15
+}
+);
 UserSchema.virtual('password')
  .set(function(password) {
  this._password = password;
