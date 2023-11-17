@@ -9,6 +9,7 @@ import ProductAdmin from './admin/ProductAdmin';
 import About from './about/About';
 import ProductsPage from './products/ProductsPage';
 import Contact from './contact/Contact';
+import TestPage from './user/TestPage';
 
 const MainRouter = () => {
 return ( <div> 
@@ -22,6 +23,8 @@ return ( <div>
 <Route exact path="/about" element={<About/>}/>
 <Route exact path="/products" element={<ProductsPage/>}/>
 <Route exact path="/contact" element={<Contact/>}/>
+<Route exact path="/testpage" element={<TestPage/>}/>
+
 </Routes>
 </div> 
 )

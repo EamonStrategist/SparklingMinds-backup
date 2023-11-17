@@ -1,5 +1,21 @@
 let apiURL = 'http://localhost:3000';
 
+const readjwt = async(user) =>{
+    try{
+    let response = await fetch(api + '/auth/test', {
+        method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(user)
+    })
+    return await response.json()
+}catch(err){
+    console.log(error);
+}
+}
+
 const signin = async (user) => {
     try {
         let response = await fetch(apiURL + '/auth/signin/', {
@@ -23,4 +39,8 @@ const signout = async () => {
         console.log(err)
     }
 }
-export { signin, signout }
+
+
+
+
+export { signin, signout, readjwt }

@@ -32,11 +32,15 @@ class AuthManager {
     cb();
   }
 
-  isAuthenticated() {
+  isAuthenticated(token) {
     if (typeof window === "undefined") {
       return false;
     }
-    return !!sessionStorage.getItem('jwt');
+    if (!(sessionStorage.getItem('jwt') === token) || sessionStorage.getItem('jwt')=== null){
+      return false;
+    }
+    return !!(sessionStorage.getItem('jwt') === token);
+
   }
 
   clearJWT(cb) {
