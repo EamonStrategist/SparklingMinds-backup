@@ -42,3 +42,5 @@
   .navbar a:hover {
     text-decoration: underline;
   }
+
+  .social-links > a > img {width: 50px; margin: 10px;};

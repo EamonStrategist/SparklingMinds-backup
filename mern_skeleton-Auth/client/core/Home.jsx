@@ -22,7 +22,8 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     minHeight: 400,
-    width: '100%',
+    width: '50%',
+    margin: '0 auto',
     height: '100%',
     objectFit: 'cover',
     marginBottom: theme.spacing(2),
@@ -101,6 +102,9 @@ export default function Home() {
           |{' '}
           <Link to="/admin" className={classes.navbarLink}>
             Admin
+          </Link>
+          <Link to="/testpage" className={classes.navbarLink}>
+            Security Test
           </Link>
         </div>
         {/* Cart Icon */}

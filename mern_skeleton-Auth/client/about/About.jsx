@@ -110,14 +110,14 @@ const About = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/images/instagram-logo.png" alt="Instagram" />
+            <img src="/images/instagram.jpg" alt="Instagram" />
           </a>
           <a
             href="https://www.facebook.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/images/facebook-logo.png" alt="Facebook" />
+            <img src="/images/facebook.png" alt="Facebook" />
           </a>
         </div>
       </footer>

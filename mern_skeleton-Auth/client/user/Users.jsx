@@ -47,11 +47,11 @@ const Users = () => {
         <footer className="footer">
         <div className="social-links">
           <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-            <img src="/images/instagram-logo.png" alt="Instagram" />
+            <img src="/images/instagram.jpg" alt="Instagram" />
           </a>
           <br></br>
           <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-            <img src="/images/facebook-logo.png" alt="Facebook" />
+            <img src="/images/facebook.png" alt="Facebook" />
           </a>
         </div>
       </footer>
