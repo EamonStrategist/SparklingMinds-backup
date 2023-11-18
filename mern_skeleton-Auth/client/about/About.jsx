@@ -65,6 +65,11 @@ const About = () => {
             <img src="/images/bracelets.jpg" alt="Bracelets" />
             Bracelets
           </a>
+          <a href="/bracelets">
+            <img src="/images/pexels-kristina-paukshtite-885218.jpg" alt="Different Bracelet" />
+            New Bracelets
+          </a>
+
           <a href="/pendants">
             <img src="/images/pendants.jpg" alt="Pendants" />
             Pendants
