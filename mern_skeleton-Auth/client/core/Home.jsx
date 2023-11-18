@@ -28,9 +28,9 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-import unicornbikeImg from './../assets/images/unicornbikeImg.jpg';
+import LogoImage  from './../assets/images/Logo.png';
 import { Link } from 'react-router-dom';
-   
+import './Home.css';   
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -43,29 +43,98 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.openTitle,
   },
   media: {
+    
+    display: 'flex',
+    alignItems: 'center', // Center the content vertically
     minHeight: 400,
+    width: '40%',
+    height: '40%',
+    margin: 'auto', // Center the content horizontally/ Set the height to auto to maintain the aspect ratio
+  },
+  navbar: {
+    backgroundColor: '#333',
+    padding: '15px',
+    marginBottom: '20px', // Add margin bottom to separate the navbar from the card
+  },
+  navbarLink: {
+    color: 'white',
+    textDecoration: 'none',
+    margin: '0 15px',
+    fontWeight: 'bold',
+  },
+  navbarLinkHover: {
+    textDecoration: 'underline',
   },
 }));
 
 export default function Home(){ 
 const classes = useStyles()
 return (
-<>
-  <Link to="/">Home</Link> | <Link to="/users">USERS</Link> | <Link to="/signup">SIGNUP</Link> | <Link to="/signin">SIGNIN</Link> | 
-       <Link to="/" >Sign-out</Link> | <Link to="/about" >About</Link> | <Link to="/products" >Products</Link> | <Link to="/contact" >Contact</Link> 
-       | <Link to="/admin" >Admin</Link>| <Link to="/testpage" >Security</Link>
+  <>
+    {/* Render the navbar */}
+    <div className={classes.navbar}>
+      <Link to="/" className={classes.navbarLink}>
+        Home
+      </Link>{' '}
+      |{' '}
+      <Link to="/users" className={classes.navbarLink}>
+        USERS
+      </Link>{' '}
+      |{' '}
+      <Link to="/signup" className={classes.navbarLink}>
+        SIGNUP
+      </Link>{' '}
+      |{' '}
+      <Link to="/signin" className={classes.navbarLink}>
+        SIGNIN
+      </Link>{' '}
+      |{' '}
+      <Link to="/" className={classes.navbarLink}>
+        Sign-out
+      </Link>{' '}
+      |{' '}
+      <Link to="/about" className={classes.navbarLink}>
+        About
+      </Link>{' '}
+      |{' '}
+      <Link to="/products" className={classes.navbarLink}>
+        Products
+      </Link>{' '}
+      |{' '}
+      <Link to="/contact" className={classes.navbarLink}>
+        Contact
+      </Link>{' '}
+      |{' '}
+      <Link to="/admin" className={classes.navbarLink}>
+        Admin
+      </Link>
+    </div>
 
+{/* Render the card */}
 <Card className={classes.card}>
-   
-  <Typography variant="h6" className={classes.title}>Home Page</Typography>
-<CardMedia className={classes.media}
-image={unicornbikeImg} title="Unicorn Bicycle"/>
-<CardContent>
-<Typography variant="body2" component="p"> 
-Welcome to the MERN Skeleton home page.
-</Typography> 
-</CardContent>
-</Card> 
+        <Typography variant="h6" className={classes.title}>
+          Sparkling Minds
+        </Typography>
+        <CardMedia className={classes.media} image={LogoImage} title="Sparkling Minds" />
+        <CardContent>
+          <Typography variant="body2" component="p">
+            Sparkle in Every Story. Find Your Glitter. Find that special something for that special someone, from
+            simple to statement to sentimental. Shop our top categories.
+          </Typography>
+        </CardContent>
+      </Card>
+
+      <footer className="footer">
+        <div className="social-links">
+          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+            <img src="/images/instagram-logo.png" alt="Instagram" />
+          </a>
+          <br></br>
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+            <img src="/images/facebook-logo.png" alt="Facebook" />
+          </a>
+        </div>
+      </footer>
 </>
 )
 }

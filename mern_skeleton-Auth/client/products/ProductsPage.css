@@ -11,14 +11,17 @@
   
   /* Styles for the card */
   .card {
-    max-width: 600px;
-    margin: auto;
-    margin-top: 20px;
+    max-width: 300px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
   }
   
   .title {
+    text-align: center;
     padding: 15px;
     color: #333;
+    font-size: 1.5rem;
   }
   
   .media {
@@ -41,4 +44,10 @@
   
   .navbar a:hover {
     text-decoration: underline;
+  }
+  .product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
   }
