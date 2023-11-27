@@ -1,46 +1,46 @@
 .link {
-    margin-right: 10px;
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-  }
-  
-  .link:hover {
-    text-decoration: underline;
-  }
-  
-  /* Styles for the card */
-  .card {
-    max-width: 600px;
-    margin: auto;
-    margin-top: 20px;
-  }
-  
-  .title {
-    padding: 15px;
-    color: #333;
-  }
-  
-  .media {
-    min-height: 400px;
-    width: 40%;
-    height: 60%;
-  }
-  
-  /* Navbar styles */
-  .navbar {
-    background-color: #333;
-    padding: 15px;
-  }
-  
-  .navbar a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-  }
-  
-  .navbar a:hover {
-    text-decoration: underline;
-  }
+  margin-right: 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
 
-  .social-links > a > img {width: 50px; margin: 10px;};
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Styles for the card */
+.card {
+  max-width: 600px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.title {
+  padding: 15px;
+  color: #333;
+}
+
+.media {
+  min-height: 400px;
+  width: 40%;
+  height: 60%;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #333;
+  padding: 15px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.social-links > a > img {width: 50px; margin: 10px;};

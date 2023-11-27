@@ -1,28 +1,35 @@
-import React, { useState } from 'react';
-import AuthManager from './auth-helper.js';
-import { useNavigate } from 'react-router-dom';
-import { makeStyles } from '@material-ui/core/styles';
-import { Card, CardContent, Typography, TextField, CardActions, Button } from '@material-ui/core';
-import { Link } from 'react-router-dom';
-import { signin } from './api-auth.js'
+import React, { useState } from "react";
+import AuthManager from "./auth-helper.js";
+import { useNavigate } from "react-router-dom";
+import { makeStyles } from "@material-ui/core/styles";
+import {
+  Card,
+  CardContent,
+  Typography,
+  TextField,
+  CardActions,
+  Button,
+} from "@material-ui/core";
+import { Link } from "react-router-dom";
+import { signin } from "./api-auth.js";
 
 const useStyles = makeStyles((theme) => ({
   card: {
     maxWidth: 400,
-    margin: '0 auto',
+    margin: "0 auto",
     marginTop: theme.spacing(3),
     padding: theme.spacing(2),
-    textAlign: 'center',
+    textAlign: "center",
   },
   textField: {
-    width: '100%',
+    width: "100%",
     marginBottom: theme.spacing(2),
   },
   error: {
-    color: 'red',
+    color: "red",
   },
   submit: {
-    margin: '0 auto',
+    margin: "0 auto",
     marginBottom: theme.spacing(2),
   },
   title: {
@@ -35,9 +42,9 @@ export default function Signin(props) {
   const navigate = useNavigate();
 
   const [values, setValues] = useState({
-    email: '',
-    password: '',
-    error: '',
+    email: "",
+    password: "",
+    error: "",
   });
 
   const handleChange = (name) => (event) => {
@@ -57,8 +64,8 @@ export default function Signin(props) {
       } else {
         let auth = new AuthManager();
         auth.authenticate(data.token, () => {
-          setValues({ ...values, error: '' });
-          navigate('/'); // Redirect to the home page after successful login
+          setValues({ ...values, error: "" });
+          navigate("/"); // Redirect to the home page after successful login
         });
       }
     });
@@ -74,14 +81,14 @@ export default function Signin(props) {
           label="Email"
           className={classes.textField}
           type="email"
-          onChange={handleChange('email')}
+          onChange={handleChange("email")}
           value={values.email}
         />
         <TextField
           label="Password"
           className={classes.textField}
           type="password"
-          onChange={handleChange('password')}
+          onChange={handleChange("password")}
           value={values.password}
         />
       </CardContent>
@@ -97,9 +104,7 @@ export default function Signin(props) {
           color="primary"
           className={classes.submit}
           onClick={clickSubmit}
-
         >
-
           Sign In
         </Button>
       </CardActions>

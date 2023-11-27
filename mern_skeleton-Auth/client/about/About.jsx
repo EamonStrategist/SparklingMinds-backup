@@ -66,7 +66,10 @@ const About = () => {
             Bracelets
           </a>
           <a href="/bracelets">
-            <img src="/images/pexels-kristina-paukshtite-885218.jpg" alt="Different Bracelet" />
+            <img
+              src="/images/pexels-kristina-paukshtite-885218.jpg"
+              alt="Different Bracelet"
+            />
             New Bracelets
           </a>
 
@@ -99,8 +102,6 @@ const About = () => {
         </p>
       </div>
 
-
-      
       {/* Footer */}
 
       <footer className="footer">

@@ -1,17 +1,8 @@
-import React from 'react';
-import './ProductContainer';
+import React from "react";
+import "./ProductContainer";
 
 const ProductContainer = (props) => {
-
-return <div className="item-container">
-    {props.children};
-
-</div>
-
-
-
-
-
-}
+  return <div className="item-container">{props.children};</div>;
+};
 
 export default ProductContainer;

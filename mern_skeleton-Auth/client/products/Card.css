@@ -1,34 +1,33 @@
-
-
 .card {
     border: 1px solid black;
     width: 33%;
-}
-.card h3, .card h4, .card p {
+  }
+  .card h3,
+  .card h4,
+  .card p {
     margin: 5px 0;
     color: #333;
-}
-
-.card h3 {
+  }
+  
+  .card h3 {
     font-size: 1.5rem;
-}
-
-.card h4 {
+  }
+  
+  .card h4 {
     font-size: 1.2rem;
-}
-
-.card p {
+  }
+  
+  .card p {
     font-size: 1rem;
-}
-
-.card > img {
-    
+  }
+  
+  .card > img {
     width: 100%;
     height: auto;
     border-bottom: 1px solid #ccc;
-    
-}
-.card:hover {
+  }
+  .card:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transform: translateY(-2px);
-}
+  }
+  
