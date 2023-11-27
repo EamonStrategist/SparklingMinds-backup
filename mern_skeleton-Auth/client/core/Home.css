@@ -2,7 +2,7 @@ body {
   background-color: #dacca5;
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
 }
 
@@ -20,7 +20,7 @@ body {
 }
 
 .link:hover {
-  color: #e44d26;
+  color: #e4ce26;
 }
 
 .card {
@@ -33,7 +33,7 @@ body {
 
 .title {
   padding: 20px;
-  color: #333;
+  background-color: rgb(80, 115, 80);
   font-size: 28px;
   border-bottom: 2px solid #ddd;
 }
@@ -45,7 +45,7 @@ body {
 }
 
 .navbar {
-  background-color: #e44d26;
+  background-color: rgb(80, 115, 80);
   padding: 15px 0;
   text-align: center;
   display: flex;
@@ -73,4 +73,25 @@ body {
 
 .cart-icon:hover {
   color: #830f0f;
+}
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(80, 115, 80);
+  padding: 20px;
+  color: white;
+}
+
+
+
+/* Contact Information */
+.contact-info {
+  text-align: left;
+}
+
+/* Copyright */
+.copyright {
+  text-align: right;
 }
